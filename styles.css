@@ -1,0 +1,216 @@
+/* CSS RESET STARTS */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* CSS RESET ENDS */
+
+body {
+  padding: 0;
+  margin: 0;
+  color: #f3e7d3;
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  /* font-weight: 400; */
+  font-style: normal;
+  background: #151a17;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+  height: 6vh;
+  border-bottom: solid 3px #da7b16;
+}
+
+.logo {
+  padding: 10px 0;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+/* underline animation */
+.underline {
+  position: relative;
+  display: inline-block;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #da7b16;
+  transition: width 0.3s ease-in-out;
+}
+
+.underline:hover::after {
+  width: 100%;
+}
+/* end underline animation */
+
+.email {
+  text-decoration: none;
+  color: #f9f1e4;
+  padding: 20px;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 130%;
+  /* font-weight: 700; */
+  color: #f9f1e4;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+section {
+  padding: 2rem;
+}
+
+#about{
+    padding: 2rem;
+}
+
+#about p{
+    font-size: 2rem;
+    line-height: 125%;
+    max-width: 650px;
+}
+
+footer {
+  padding: 2rem;
+}
