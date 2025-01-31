@@ -11,52 +11,49 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
       <nav>
-        <div class="logo underline">
+        <div class="logo">
           <h1>Gavin Young</h1>
           <h2>Front-End Software Engineer</h2>
         </div>
-        <a class="email underline" href="mailto:younnit@gmail.com" target="_blank">Email me</a>
+        <div>
+          <a class="email underline" href="mailto:younnit@gmail.com" target="_blank">Email me</a>
+        </div>
       </nav>
     </header>
     <div class="wrapper">
       <section id="about">
         <p>
-          Hey, I'm Gavin. <br><br>
           Front-End Software Engineer with over 3 years of experience. I specialize in bringing modern designs to life with clean code and innovative solutions.
         </p>
       </section>
-  
+
+      <section class="about">
+        <h3>-about</h3>
+        <p>
+          I'm a developer with a passion for creating beautiful, user-friendly, and accessible websites. I have experience working with modern technologies like NUXT3, and the Shopify CLI. I'm always looking for new opportunities to learn and grow as a developer.
+          <br><br>
+
+          Currently I work as a Front-End Engineer at <b><a class="underline" href="https://balanceofnature.com/" target="_blank">Balance of Nature</a></b>, where I help build and maintain the company's website and e-commerce platform. I also work on the company's internal tools and applications.
+        </p>
+      </section>
+
       <section id="projects">
         <h3>-latest works</h3>
-        <div class="project bon" onclick="openModal('bon')">
-          <img src="./assets/images/bon-landing.png" alt="Balance of Nature Fruits and Veggies">
-          <div class="project-info">
-            <span class="title">BALANCE OF NATURE</span>
-            <span class="company">FRUITS AND VEGGIES</span>
-          </div>
-        </div>
-      
-        <div class="project drp" onclick="openModal('drp')">
-          <img src="./assets/images/dr-p-landing.png" alt="Dr Phytos Dog Topper Product">
-          <div class="project-info">
-            <span class="title">DR. PHYTOS</span>
-            <span class="company">DOG NUTRITION</span>
-          </div>
-        </div>
       </section>
       
       <section id="contact">
         <h3>-contact</h3>
         <p>Interested in working together? Let's chat!</p>
         <div class="socials">
-          <a href="https://www.linkedin.com/in/gavin-young2/" target="_blank">
+          <a class="underline" href="https://www.linkedin.com/in/gavin-young2/" target="_blank">
             <img src="./assets/icons/linkedin.svg" alt="LinkedIn">
           </a>
-          <a href="" target="_blank">
+          <a class="underline" href="" target="_blank">
             <img src="./assets/icons/github.svg" alt="GitHub">
           </a>
         </div>
@@ -67,22 +64,6 @@
       <p>&copy; 2025 Gavin Young</p>
       <p>Utah → <span class="clock" timezone="-7"></span></p>
     </footer>
-
-    <!-- Modal Structure -->
-    <div id="modal" class="modal">
-      <p>Tap anywhere outside the box to close.</p>
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-          <div class="modal-logo">
-            <img id="modal-image" src="" alt="">
-            <a id="modal-link" href="" target="_blank">Link <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="12" height="12" viewBox="0 0 24 24">
-              <path d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 12 L 19 12 L 19 19 L 5 19 L 5 5 L 12 5 L 12 3 L 5 3 z M 14 3 L 14 5 L 17.585938 5 L 8.2929688 14.292969 L 9.7070312 15.707031 L 19 6.4140625 L 19 10 L 21 10 L 21 3 L 14 3 z"></path>
-              </svg></a>
-          </div>
-          <img id="modal-hero" class="modal-hero" src="" alt="">
-          <p id="modal-description"></p>
-      </div>
-    </div>
 
     <script src="app.js"></script>
   </body>

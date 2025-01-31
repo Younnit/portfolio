@@ -1,3 +1,55 @@
+/* COLOR PALETTE SWITCHES */
+
+/* DEFAULT */
+/* :root {
+  --bg-color: #ffffff;
+  --text-color: #0e0e0e;
+  --header-color: #0e0e0e;
+  --link-color: #006699;
+  --accent-color: #da7b16;
+} */
+
+/* DARK-GREEN AND OFF-WHITE */
+/* :root {
+  --bg-color: #151a17;
+  --text-color: #f9f1e4;
+  --header-color: #ebebeb;
+  --link-color: #f9f1e4;
+  --accent-color: #da7b16;
+} */
+
+/* LAVENDER MONOTONE */
+/* :root {
+  --bg-color: #A294F9;
+  --text-color: #F5EFFF;
+  --header-color: #ebebeb;
+  --link-color: #E5D9F2;
+  --accent-color: #CDC1FF;
+} */
+
+/* DARK GREEN MONOTONE */
+/* :root {
+  --bg-color: #2f3e46;
+  --text-color: #84a98c;
+  --header-color: #cad2c5;
+  --link-color: #cad2c5;
+  --accent-color: #cad2c5;
+} */
+
+/* BLACK YELLOW AND BLUE */
+:root {
+  --bg-color: #121212;
+  --text-color: #979797;
+  --header-color: #ebebeb;
+  --link-color: #EDAE15;
+  --accent-color: #006699;
+}
+
+:root{
+  /* --font-family: "Oswald", serif; */
+  --font-family: "Roboto", serif;
+}
+
 /* CSS RESET STARTS */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -137,11 +189,13 @@ html {
 body {
   padding: 0;
   margin: 0;
-  color: #f3e7d3;
-  font-family: "Oswald", serif;
+  /* color: #f3e7d3; */
+  color: var(--text-color);
+  font-family: var(--font-family);
   font-optical-sizing: auto;
   font-style: normal;
-  background: linear-gradient(180deg, #151a17 0%, #0e0e0e 100%);
+  /* background: linear-gradient(180deg, #151a17 0%, #0e0e0e 100%); */
+  background-color: var(--bg-color);
 }
 
 a{
@@ -149,16 +203,15 @@ a{
 }
 
 a:visited{
-  color: #f3e7d3;
+  color: var(--link-color);
+  /* color: #0e0e0e; */
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
   padding: 1rem 2rem;
-  align-items: center;
-  height: 6vh;
-  border-bottom: solid 3px #da7b16;
+  height: 20vh;
+  flex-direction: column;
 }
 
 .logo {
@@ -181,7 +234,8 @@ nav {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #da7b16;
+  background-color: var(--accent-color);
+  /* background-color: #da7b16; */
   transition: width 0.3s ease-in-out;
 }
 
@@ -192,35 +246,47 @@ nav {
 
 .email {
   text-decoration: none;
-  color: #f3e7d3;
-  padding: 20px;
+  color: var(--text-color);
+  padding: 20px 0;
   cursor: pointer;
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 130%;
-  color: #f9f1e4;
+  /* color: #f9f1e4; */
+  color: var(--header-color);
 }
 
 h2 {
   font-size: 1.1rem;
+  color: var(--header-color);
+}
+
+h3{
+  color: var(--header-color);
 }
 
 section {
   padding: 2rem;
 }
 
+section p{
+  font-size: 1.25rem;
+  line-height: 125%;
+  padding: 1rem 0;
+}
+
 #about{
     padding: 0 2rem;
-    height: 70vh;
+    margin-bottom: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 #about p{
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 125%;
     max-width: 650px;
 }
@@ -241,8 +307,8 @@ section {
 .bon{
   justify-content: flex-start;
   align-items: flex-start;
-
 }
+
 .drp{
   justify-content: flex-end;
   align-items: flex-end;
@@ -300,12 +366,12 @@ footer {
 .modal-content {
   background-color: #fff;
   color: #0e0e0e;
-  padding: 5rem 2rem;
+  padding: 2rem;
   border-radius: 8px;
   height: 60%;
   width: 80%;
   max-width: 500px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
   text-align: center;
   display: flex;
   flex-direction: column;
