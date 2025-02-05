@@ -9,22 +9,31 @@
   --accent-color: #da7b16;
 } */
 
+/* OFF-WHITE - RED ACCENTS */
+:root {
+  --bg-color: #EEE4D9;
+  --text-color: #000000;
+  --header-color: #C30606;
+  --link-color: #C30606;
+  --accent-color: #C30606;
+}
+
 /* DARK-GREEN AND OFF-WHITE */
 /* :root {
   --bg-color: #151a17;
   --text-color: #f9f1e4;
   --header-color: #ebebeb;
-  --link-color: #f9f1e4;
+  --link-color: #da7b16;
   --accent-color: #da7b16;
 } */
 
 /* LAVENDER MONOTONE */
 /* :root {
-  --bg-color: #A294F9;
-  --text-color: #F5EFFF;
-  --header-color: #ebebeb;
-  --link-color: #E5D9F2;
-  --accent-color: #CDC1FF;
+  --bg-color: linear-gradient(310deg, rgba(47,24,75,1) 58%, rgba(119,57,195,1) 100%);
+  --text-color: #9b72cf;
+  --header-color: #c8b1e4;
+  --link-color: #f4effa;
+  --accent-color: #c8b1e4;
 } */
 
 /* DARK GREEN MONOTONE */
@@ -37,16 +46,15 @@
 } */
 
 /* BLACK YELLOW AND BLUE */
-:root {
+/* :root {
   --bg-color: #121212;
   --text-color: #979797;
   --header-color: #ebebeb;
   --link-color: #EDAE15;
   --accent-color: #006699;
-}
+} */
 
 :root{
-  /* --font-family: "Oswald", serif; */
   --font-family: "Roboto", serif;
 }
 
@@ -195,7 +203,14 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   /* background: linear-gradient(180deg, #151a17 0%, #0e0e0e 100%); */
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
+  background: var(--bg-color);
+}
+
+svg{
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
 }
 
 a{
@@ -235,7 +250,6 @@ nav {
   width: 0;
   height: 2px;
   background-color: var(--accent-color);
-  /* background-color: #da7b16; */
   transition: width 0.3s ease-in-out;
 }
 
@@ -244,18 +258,19 @@ nav {
 }
 /* end underline animation */
 
-.email {
+.icons {
   text-decoration: none;
   color: var(--text-color);
-  padding: 20px 0;
+  padding: 20px 0 5px;
   cursor: pointer;
+  margin-right: 1rem;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 130%;
-  /* color: #f9f1e4; */
   color: var(--header-color);
+  font-weight: 700;
 }
 
 h2 {
@@ -265,6 +280,10 @@ h2 {
 
 h3{
   color: var(--header-color);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 section {
@@ -272,20 +291,18 @@ section {
 }
 
 section p{
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 125%;
   padding: 1rem 0;
+  text-rendering: optimizeLegibility;
 }
 
-#about{
+#intro{
     padding: 0 2rem;
     margin-bottom: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-#about p{
+#intro p{
     font-size: 1.5rem;
     line-height: 125%;
     max-width: 650px;
@@ -336,79 +353,32 @@ section p{
   text-align: right;
 }
 
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  flex-direction: column;
+}
+
+#contact h2{
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#contact h3{
+  font-size: 1rem;
+  margin: 1rem 0 2rem;
+  font-weight: 500;
+}
+
+#contact img{
+  width: 67%;
+}
+
 footer {
   padding: 2rem;
 }
 
 
-/* MODAL STYLES */
-.modal {
-  display: none; 
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal p{
-  font-size: 1rem;
-  line-height: 125%;
-  padding: 0 0 2rem 0;
-}
-
-.modal-content {
-  background-color: #fff;
-  color: #0e0e0e;
-  padding: 2rem;
-  border-radius: 8px;
-  height: 60%;
-  width: 80%;
-  max-width: 500px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.modal-logo{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.modal-logo img {
-  width: 50%;
-}
-
-.modal-hero{
-  width: 100%;
-}
-
-.modal-content a{
-  color: #0e0e0e;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-}
-/* END OF MODAL STYLES */
